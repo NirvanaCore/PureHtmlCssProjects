@@ -1,0 +1,633 @@
+<html>
+
+<head>
+  <title> JS Documentation </title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav id="navbar">
+
+  <div class="logo">
+    <img id="header-img" src="./image/jsd.jpg" alt="JS logo" /></div>
+
+		<ul>
+		  <li><a class="nav-link" href="#introduction"> Introduction</a></li>
+		  
+		  <li><a class="nav-link" href="#jacascript-fundamentals"> Java Script Fundamentals</a></li>
+		  <ol>
+			<li><a class="nav-link" href="#hello-world"> Hello, World !</a></li>
+			<li><a class="nav-link" href="#variables"> Variables </a></li>
+			<li><a class="nav-link" href="#declaring-variables"> Declaring Variables</a></li>
+			<li><a class="nav-link" href="#type-conversions"> Type Conversions </a></li>
+			<li><a class="nav-link" href="#comparisons"> Comparisons</a></li>
+			<li><a class="nav-link" href="#condition-operators"> Conditional Operators : if, '?'</a></li>
+			<li><a class="nav-link" href="#logical-operators">Logical operators</a></li>
+			<li><a class="nav-link" href="#loops"> Loops: while and for</a></li>
+			<li><a class="nav-link" href="#switch">The "switch" statement</a></li>
+		  </ol>
+		  
+		  <li><a class="nav-link" href="#code-quality"> Code quality</a></li>
+		  <ol>
+			<li><a class="nav-link" href="#coding-style"> Coding Style </a></li>
+			<li><a class="nav-link" href="#comments"> Comments </a></li>
+		  </ol>
+
+		  <li><a class="nav-link" href="#data-types"> Data Types</a></li>
+			<ol>
+				<li><a class="nav-link" href="#numbers_strings"> Numbers and strings</a></li>
+				<li><a class="nav-link" href="#arrays"> Arrays</a></li>
+				<li><a class="nav-link" href="#maps_sets"> Map and Set </a></li>
+				<li><a class="nav-link" href="#object_values">Object.keys, values, entries</a></li>
+				<li><a class="nav-link" href="#date_time">Date and time</a></li>
+			</ol>
+			<li><a class="nav-link" href="#advanced-working-with-functions"> Advanced working with functions</a></li>
+			<ol>	
+				<li><a class="nav-link" href="#functions"> Functions </a></li>
+				<li><a class="nav-link" href="#naming_functions"> Naming Functions</a></li>
+			</ol>
+			
+			<li><a class="nav-link" href="#object-properties-configuration"> Object properties configuration</a></li>
+				<ol>
+				<li><a class="nav-link" href="#Property_flags_descriptors"> Property flags and descriptors</a></li>
+				<li><a class="nav-link" href="#Property_getter_setters"> Property getters and setters</a></li>
+			  </ol>
+			  
+			  <li><a class="nav-link" href="#prototype-inheritance"> Prototype, inheritance</a></li>
+			  <ol>
+				<li><a class="nav-link" href="#Prototypal_inheritance"> Prototypal inheritance</a></li>
+				<li><a class="nav-link" href="#Prototype_methods">Prototype methods, objects without __proto__</a></li>
+			  </ol>
+      
+			<li><a class="nav-link" href="#classes"> Classes</a></li>
+			  <ol>
+				  <li><a class="nav-link" href="#Class_syntax">Class basic syntax</a></li>
+				  <li><a class="nav-link" href="#Class_inheritance"> Class inheritance</a></li>
+				  <li><a class="nav-link" href="#extending_classes">Extending built-in classes</a></li>
+			  </ol>
+      
+		  <li><a class="nav-link" href="#error-handling"> Error handling</a></li>
+		    <ol>
+				<li><a class="nav-link" href="#try_catch"> Error handling, try..catch</a></li>
+				<li><a class="nav-link" href="#extending_Errors"> Custom errors, extending Errors</a></li>
+			</ol>
+		  
+		  <li><a class="nav-link" href="#modules"> Modules</a></li>
+		  <ol>
+			<li><a class="nav-link" href="#modules_introduction"> Modules, introduction</a></li>
+			<li><a class="nav-link" href="#export_import"> Export and Import</a></li>
+			<li><a class="nav-link" href="#dynamic_imports">Dynamic imports</a></li>
+		  </ol>
+		  
+		  <li><a class="nav-link" href="#miscellaneous"> Miscellaneous</a></li>
+		  <ol>
+			<li><a class="nav-link" href="#proxy_reflect"> Proxy and Reflect</a>
+			<li><a class="nav-link" href="#eval"> Eval: run a code string</a></li>
+			</li><li><a class="nav-link" href="#currying"> Curryings</a></li>
+		  </ol>
+		
+		  <li><a class="nav-link" href="#reference"> References</a></li>
+		</ul>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="introduction">
+      <header> Introduction</header>
+      <article>
+        <h4>What is JavaScript ?</h4>
+        <p>JavaScript was initially created to “make web pages alive”. The programs in this language are called scripts. They can be written right in a web page’s HTML and run automatically as the page loads. Scripts are provided and executed as plain text. They don’t need special preparation or compilation to run. In this aspect, JavaScript is very different from another language called Java.
+        </p>
+        <p>When JavaScript was created, it initially had another name: “LiveScript”. But Java was very popular at that time, so it was decided that positioning a new language as a “younger brother” of Java would help.But as it evolved, JavaScript became a fully independent language with its own specification called ECMAScript, and now it has no relation to Java at all. Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called the JavaScript engine. The browser has an embedded engine sometimes called a “JavaScript virtual machine”.</p>
+        <h4>What can in-browser JavaScript do?</h4>
+        <p>Modern JavaScript is a “safe” programming language. It does not provide low-level access to memory or CPU, because it was initially created for browsers which do not require it. JavaScript’s capabilities greatly depend on the environment it’s running in. For instance, Node.js supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc. In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.</p>
+        <h4>What CAN’T in-browser JavaScript do?</h4>
+        <p>JavaScript’s abilities in the browser are limited for the sake of the user’s safety. The aim is to prevent an evil webpage from accessing private information or harming the user’s data.</p>
+        <ul>
+          <h5>Examples of such restrictions include:</h5>
+          <li>JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS functions.</li>
+          <li>Different tabs/windows generally do not know about each other. Sometimes they do, for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other if they come from different sites (from a different domain, protocol or port).</li>
+          <li>JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that’s a safety limitation.</li>
+        </ul>
+        <h4>What makes JavaScript unique?</h4>
+        <p>There are at least three great things about JavaScript:</p>
+        <ul>
+          <h5>There are at least three great things about JavaScript:</h5>
+          <li>Full integration with HTML/CSS.</li>
+          <li>Simple things are done simply.</li>
+          <li>Support by all major browsers and enabled by default.</li>
+        </ul>
+        <p>JavaScript is the only browser technology that combines these three things. That’s what makes JavaScript unique. That’s why it’s the most widespread tool for creating browser interfaces. That said, JavaScript also allows to create servers, mobile applications, etc.</p>
+        <h4> Summary</h4>
+        <ul>
+          <li>JavaScript was initially created as a browser-only language, but is now used in many other environments as well.
+          </li>
+          <li>Today, JavaScript has a unique position as the most widely-adopted browser language with full integration with HTML/CSS.</li>
+          <li>There are many languages that get “transpiled” to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="main-section" id="jacascript-fundamentals">
+      <header> Java Script Fundamentals</header>
+      <article>
+        <h4 id="hello-world"> Hello, World !</h4>
+        <p>To get started with writing JavaScript, open the Scratchpad and write your
+          first "Hello world" JavaScript code:<p>
+            <code>function greetMe(yourName) { alert("Hello " + yourName); }
+              greetMe("World");
+            </code>
+            <p>
+              Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p>
+            <h4 id="variables"> Variables</h4>
+            <p>You use variables as symbolic names for values in your application. The
+              names of variables, called identifiers, conform to certain rules.
+            </p>
+            <p>
+              A JavaScript identifier must start with a letter, underscore (_), or
+              dollar sign ($); subsequent characters can also be digits (0-9). Because
+              JavaScript is case sensitive, letters include the characters "A" through
+              "Z" (uppercase) and the characters "a" through "z" (lowercase).
+            </p>
+            <p>
+              You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers.
+              You can also use the Unicode escape sequences as characters in
+              identifiers. Some examples of legal names are Number_hits, temp99, and
+              _name.</p>
+            <h4 id="declaring-variables"> Declaring Variables</h4>
+            <h5>You can declare a variable in three ways:</h5>
+            <p>
+              With the keyword var. For example, <code>var x = 42.</code> This syntax
+              can be used to declare both local and global variables.
+            </p>
+            <p>
+              By simply assigning it a value. For example, <code>x = 42.</code> This
+              always declares a global variable. It generates a strict JavaScript
+              warning. You shouldn't use this variant.
+            </p>
+            <p>
+              With the keyword let. For example,<code> let y = 13.</code> This syntax
+              can be used to declare a block scope local variable. See Variable scope
+              below.</p>
+            <h4 id="type-conversions"> Type Conversions </h4>
+            <p>Most of the time, operators and functions automatically convert the values given to them to the right type. For example, alert automatically converts any value to a string to show it. Mathematical operations convert values to numbers. There are also cases when we need to explicitly convert a value to the expected type.</p>
+            <p>String Conversion : String conversion happens when we need the string form of a value. For example, alert(value) does it to show the value. We can also call the String(value) function to convert a value to a string:</p> <code><ul><li>let value = true;</li><li>alert(typeof value); // boolean</li<li>value = String(value); // now value is a string "true"</li><li>alert(typeof value); // string</li></ul></code>String conversion is mostly obvious. A false becomes "false", null becomes "null", etc.
+            <p>Numeric Conversion : Numeric conversion happens in mathematical functions and expressions automatically. For example, when division / is applied to non-numbers:</p><code>alert( "6" / "2" ); // 3, strings are converted to numbers</code>
+            <p>We can use the Number(value) function to explicitly convert a value to a number:</p><code><ul><li>let str = "123";</li><li>alert(typeof str); // string</li><li>let num = Number(str); // becomes a number 123</li><li>alert(typeof num); // number</li></ul></code>
+            <p>Boolean Conversion : Boolean conversion is the simplest one. It happens in logical operations (later we’ll meet condition tests and other similar things) but can also be performed explicitly with a call to Boolean(value). The conversion rule: Values that are intuitively “empty”, like 0, an empty string, null, undefined, and NaN, become false. Other values become true. For Instance</p><code><ul><li>alert( Boolean(1) ); // true </li><li>alert( Boolean(0) ); // false</li><li>alert( Boolean("hello") ); // true</li><li>alert( Boolean("") ); // false</li></ul></code>
+            <h3 id="comparisons"> Comparisons</h3>
+            <p>We know many comparison operators from maths. In JavaScript they are written like this: <code><ul><li>Greater/less than: a > b, a < b.</li><li> Greater/less than or equals: a >= b, </li><li>a <= b. Equals: a==b, </li></ul></code>
+              <p> please note the double equality sign = means the equality test, while a single one a = b means an assignment. Not equals. In maths the notation is ≠, but in JavaScript it’s written as a != b. In this article we’ll learn more about different types of comparisons, how JavaScript makes them, including important peculiarities.</p>
+              <p>Boolean is the resultAll comparison operators return a boolean value true – means “yes”, “correct” or “the truth”. false – means “no”, “wrong” or “not the truth”. For example:</p>
+              <code><ul> <li>alert( 2 > 1 ); // true (correct)</li><li>alert( 2 == 1 ); // false (wrong)</li><li>alert( 2 != 1 ); // true (correct)</li></ul></code>
+              <p>String comparison : To see whether a string is greater than another, JavaScript uses the so-called “dictionary” or “lexicographical” order. In other words, strings are compared letter-by-letter. For example:</p>
+              <code><ul><li>alert( 'Z' > 'A' ); // true</li><li>alert( 'Glow' > 'Glee' ); // true</li><li>alert( 'Bee' > 'Be' ); // true</li></ul></code>
+
+              <h3 id="condition-operators"> Conditionl Operators: if, '?'</h3>
+              <p>To do that, we can use the if statement and the conditional operator ?, that’s also called a “question mark” operator. The “if” statement : The if(...) statement evaluates a condition in parentheses and, if the result is true, executes a block of code. For example:</p>
+              <code>
+                <ul>
+                  <li>let year = prompt('In which year was ECMAScript-2015 specification published?', '');</li>
+                  <li>if (year == 2015) alert( 'You are right!' );</li>
+                </ul>
+              </code>
+              <p>Boolean conversion : The if (…) statement evaluates the expression in its parentheses and converts the result to a boolean. Let’s recall the conversion rules from the chapter Type Conversions: A number 0, an empty string "", null, undefined, and NaN all become false. Because of that they are called “falsy” values. Other values become true, so they are called “truthy”. So, the code under this condition would never execute:</p>
+              <code>if (0) { // 0 is falsy...}</code>
+              <p>…and inside this condition – it always will:</p><code>if (1) { // 1 is truthy
+                ...
+                }</code>
+              <p>Several conditions: “else if” : Sometimes, we’d like to test several variants of a condition. The else if clause lets us do that. For example:</p><code><ul><li>let year = prompt('In which year was the ECMAScript-2015 specification published?', '');</li><li>if (year < 2015) {</li><li>alert( 'Too early...' );} </li><li>else if (year > 2015) {</li><li>alert( 'Too late' );} </li><li>else {alert( 'Exactly!' );}</li></ul></code>
+        <p>Conditional operator ‘?’ : Sometimes, we need to assign a variable depending on a condition. For instance:</p><code><ul><li>let accessAllowed;</li><li>let age = prompt('How old are you?', '');</li><li>if (age > 18) {</li><li>accessAllowed = true;</li><li>} else {</li><li>accessAllowed = false;</li><li>}</li><li>alert(accessAllowed);</li></ul></code>
+
+              <h3 id="logical-operators"> Logical operators</h3>
+              <p>There are three logical operators in JavaScript: || (OR), && (AND), ! (NOT). Although they are called “logical”, they can be applied to values of any type, not only boolean. Their result can also be of any type.
+              </p>
+              <p>Let’s see the details : || (OR)</p>
+              <p> The “OR” operator is represented with two vertical line symbols:</p>
+              <p>n classical programming, the logical OR is meant to manipulate boolean values only. If any of its arguments are true, it returns true, otherwise it returns false. In JavaScript, the operator is a little bit trickier and more powerful. But first, let’s see what happens with boolean values. There are four possible logical combinations:</p>
+              <code><ul><li>alert( true || true ); // true </li><li>alert( false || true ); // true </li><li>alert( true || false ); // true</li><li>alert( false || false ); // false</li></ul></code>
+              <p>&& (AND) : The AND operator is represented with two ampersands &&:</p>
+              <code><ul><li>alert( true && true ); // true</li><li>alert( false && true ); // false</li><li>alert( true && false ); // false</li><li>alert( false && false ); // false></li></ul></code>
+        <p>! (NOT): The boolean NOT operator is represented with an exclamation sign !. The syntax is pretty simple:</p>
+              <p>The operator accepts a single argument and does the following: Converts the operand to boolean type: true/false. Returns the inverse value. For instance:</p>
+              <code><ul><li>alert( !true ); // false</li><li> alert( !0 ); // true</li></ul> </code>
+
+              <h3 id="loops"> Loops: while and for</h3>
+              <p>We often need to repeat actions. For example, outputting goods from a list one after another or just running the same code for each number from 1 to 10. Loops are a way to repeat the same code multiple times</p>
+              <p>
+                The “while” loop : The while loop has the following syntax:</p>
+              <code><ul><li>while (condition) {</li><li>// code</li><li>// so-called "loop body"</li><li>}</li></ul></code>
+              <p>The “do…while” loop : The condition check can be moved below the loop body using the do..while syntax:</p><code><ul><li>do {</li><li>// loop body</li><li>} while (condition);</li></ul>
+              </code>
+              <p>The “for” loop : The for loop is more complex, but it’s also the most commonly used loop. It looks like this:</p><code><ul> <li>for (begin; condition; step) {</li><li>// ... loop body ...</li><li>}</li></ul></code>
+
+              <h3 id="switch"> The "switch" statement</h3>
+              <p>A switch statement can replace multiple if checks. It gives a more descriptive way to compare a value with multiple variants.</p>
+              <p>The syntax : The switch has one or more case blocks and an optional default. It looks like this:</p>
+              <code><ul><li>switch(x) {</li><li> case 'value1': // if (x === 'value1') </li><li>... </li><li>[break] </li><li>case 'value2': // if (x === 'value2') </li><li>... </li><li>[break] </li><li> default: </li> <i> ... </li> <li>[break] </li><li>}</li></ul></code>
+      </article>
+    </section>
+
+    <section class="main-section" id="code-quality">
+      <header> Code Quality</header>
+      <article>
+        <h3 id="coding-style"> Coding Style </h3>
+        <p>Our code must be as clean and easy to read as possible. That is actually the art of programming – to take a complex task and code it in a way that is both correct and human-readable. A good code style greatly assists in that.</p><p> Syntax : Here is a cheat sheet with some suggested rules (see below for more details):</p>
+        <img id="code-img" src="https://drive.google.com/thumbnail?id=1RaZ8DMe5kuZi9z0Zz1fUBz1-lfiKpsMR" alt="code style">
+        
+        <h3 id="comments"> Comments </h3>
+        <p>As we know from the chapter Code structure, comments can be single-line: starting with // and multiline: /* ... */. We normally use them to describe how and why the code works.</p><h5>Good comments</h5><p>
+So, explanatory comments are usually bad. Which comments are good?</p>
+
+<h5>Describe the architecture</h5><p>
+Provide a high-level overview of components, how they interact, what’s the control flow in various situations… In short – the bird’s eye view of the code. There’s a special language UML to build high-level architecture diagrams explaining the code. Definitely worth studying.</p><h5>Document function parameters and usage</h5><p>
+There’s a special syntax JSDoc to document a function: usage, parameters, returned value.
+For instance:</p> <code><ul><li>/**</li><li>* Returns x raised to the n-th power.</li><li>*</li><li>* @param {number} x The number to raise.</li><li>* @param {number} n The power, must be a natural number.</li><li>* @return {number} x raised to the n-th power.</li><li>*/</li><li>function pow(x, n) {</li><li>...</li><li>}</li></ul></code>     
+       </article>
+    </section>
+
+    <section class="main-section" id="data-types">
+      <header> Data Types</header>
+      <article>
+        <p>A value in JavaScript is always of a certain type. For example, a string or a number. There are eight basic data types in JavaScript. Here, we’ll cover them in general and in the next chapters we’ll talk about each of them in detail. We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:</p>
+        <code><ul><li>// no error</li><li>
+let message = "hello";</li><li>
+message = 123456;</li></ul></code>
+        <h3 id="numbers_strings"> Numbers and strings </h3>
+        <h5> Numbers</h5>
+        <p>The number type represents both integer and floating point numbers. There are many operations for numbers, e.g. multiplication *, division /, addition +, subtraction -, and so on. Besides regular numbers, there are so-called “special numeric values” which also belong to this data type: Infinity, -Infinity and NaN.</p>
+<code><ul><li>let n = 123;</li><li>
+n = 12.345;</li></ul></code>
+        <h5> String</h5><p>In JavaScript, there are 3 types of quotes. </p><p>Double quotes: "Hello".</p><p>Single quotes: 'Hello'.</p><p>Backticks: `Hello`.</p><p>Double and single quotes are “simple” quotes. There’s practically no difference between them in JavaScript.</p>
+        <code><ul><li>let str = "Hello";</li><li>let str2 = 'Single quotes are ok too';</li><li>let phrase = `can embed another ${str}`;</li></ul></code><p>There are 8 basic data types in JavaScript.</p><p> number for numbers of any kind: integer or floating-point, integers are limited by ±253.</p><p> bigint is for integer numbers of arbitrary length.</p><p>string for strings. A string may have zero or more characters, there’s no separate single-character type.</p>
+        
+        <h3 id="arrays"> Arrays</h3>
+        <p>Objects allow you to store keyed collections of values. That’s fine. But quite often we find that we need an ordered collection, where we have a 1st, a 2nd, a 3rd element and so on. For example, we need that to store a list of something: users, goods, HTML elements etc. It is not convenient to use an object here, because it provides no methods to manage the order of elements. We can’t insert a new property “between” the existing ones. Objects are just not meant for such use. There exists a special data structure named Array, to store ordered collections.</p> <h5>Declaration <h5><p>
+        There are two syntaxes for creating an empty array:</p><code><ul><li>let arr = new Array();</li><li>
+let arr = [];</li></ul></code>
+        <h5>Internals</h5><p>An array is a special kind of object. The square brackets used to access a property arr[0] actually come from the object syntax. That’s essentially the same as obj[key], where arr is the object, while numbers are used as keys. They extend objects providing special methods to work with ordered collections of data and also the length property. But at the core it’s still an object. Remember, there are only 7 basic types in JavaScript. Array is an object and thus behaves like an object. For instance, it is copied by reference:</p>
+        <code><ul><li>let fruits = ["Banana"]</li><li>let arr = fruits; // copy by reference (two variables reference the same array)</li><li>alert( arr === fruits ); // true</li><li>arr.push("Pear"); // modify the array by reference</li><li>alert( fruits ); // Banana, Pear - 2 items now</li>/ul></code>
+        <h5> A word abbout length </h5><p>The length property automatically updates when we modify the array. To be precise, it is actually not the count of values in the array, but the greatest numeric index plus one. For instance, a single element with a large index gives a big length:</p>
+        <code> <ul><li>let fruits = [];</li><li>fruits[123] = "Apple";</li><li>alert( fruits.length ); // 124</li></ul></code>
+        <h5> Multidimensional</h5><li>Arrays can have items that are also arrays. We can use it for multidimensional arrays, for example to store matrices:</li><code><ul><li>let matrix = [</li><li>  [1, 2, 3],</li><li>[4, 5, 6],</li><li>[7, 8, 9]</li><li>];alert( matrix[1][1] ); // 5, the central element</li></ul></code>
+        <h5>tostring</h5><p>Arrays have their own implementation of toString method that returns a comma-separated list of elements.
+
+For instance:</p><code><ul><li>let arr = [1, 2, 3]; </li><li>
+
+alert( arr ); // 1,2,3</li><li>
+alert( String(arr) === '1,2,3' ); // true</li></ul></code>
+        
+        
+         <h3 id="maps_sets"> Map and Set </h3>
+        <p>Now we’ve learned about the following complex data structures: </p><ul><li> Objects for storing keyed collections.</li><li> Arrays for storing ordered collections.</li></ul><p>
+But that’s not enough for real life. That’s why Map and Set also exist.</p>
+        <h5>Map</h5> <p>Map is a collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any type. Methods and properties are:</p>
+        <ul><li>new Map() – creates the map.</li><li>map.set(key, value) – stores the value by the key.</li><li>map.get(key) – returns the value by the key, undefined if key doesn’t exist in map.</li><li>map.has(key) – returns true if the key exists, false otherwise.</li><li>map.delete(key) – removes the value by the key.</li><li>map.clear() – removes everything from the map.</li><li>map.size – returns the current element count.</li></ul>        <code><ul><li>let map = new Map();</li><li>
+map.set('1', 'str1');   // a string key</li><li>map.set(1, 'num1');     // a numeric key</li><li>map.set(true, 'bool1'); // a boolean key</li><li>// remember the regular Object? it would convert keys to string</li><li>// Map keeps the type, so these two are different:</li><li>alert( map.get(1)   ); // 'num1'</li><li>alert( map.get('1') ); // 'str1'</li><li>
+alert( map.size ); // 3</li></ul></code>
+        <h5> Set</h5><p>A Set is a special type collection – “set of values” (without keys), where each value may occur only once. Its main methods are:</p>
+        <ul><li>new Set(iterable) – creates the set, and if an iterable object is provided (usually an array), copies values from it into the set.</li><li>
+set.add(value) – adds a value, returns the set itself.</li><li>
+set.delete(value) – removes the value, returns true if value existed at the moment of the call, otherwise false.</li><li>set.has(value) – returns true if the value exists in the set, otherwise false.</li><li>set.clear() – removes everything from the set.</li><li>set.size – is the elements count.</li></ul>
+        <p>For example, we have visitors coming, and we’d like to remember everyone. But repeated visits should not lead to duplicates. A visitor must be “counted” only once. Set is just the right thing for that:</p>
+        <code><ul><li>let set = new Set(); </li><li>let john = { name: "John" };</li><li>let pete = { name: "Pete" };</li><li>let mary = { name: "Mary" };</li><li>// visits, some users come multiple times</li><li>set.add(john);</li><li>set.add(pete);</li><li>set.add(mary);</li><li>set.add(john);</li><li>set.add(mary);</li><li>// set keeps only unique values</li><li>alert( set.size ); // 3</li><li>for (let user of set) {</li><li> alert(user.name); // John (then Pete and Mary)</li><li>}</li></ul></code>
+        
+        <h3 id="object_values">Object.keys, values, entries</h3>        
+        <p>Let’s step away from the individual data structures and talk about the iterations over them. In the previous chapter we saw methods map.keys(), map.values(), map.entries(). These methods are generic, there is a common agreement to use them for data structures. If we ever create a data structure of our own, we should implement them too.</p><p>They are supported for: Map, Set and Array. Plain objects also support similar methods, but the syntax is a bit different.</p>
+        <h5>Object.keys, values, entries </h5> <p>
+For plain objects, the following methods are available: <ul><li>Object.keys(obj) – returns an array of keys.</li><li>
+Object.values(obj) – returns an array of values.</li><li>Object.entries(obj) – returns an array of [key, value] pairs.</li></ul>
+          
+        <h3 id="date_time">Date and time </h3>
+        <p>Let’s meet a new built-in object: Date. It stores the date, time and provides methods for date/time management. For instance, we can use it to store creation/modification times, to measure time, or just to print out the current date.</p>
+        <h5>Creation</h5><p>To create a new Date object call new Date() with one of the following arguments: new Date() Without arguments – create a Date object for the current date and time:</p> <code><ul><li>let now = new Date();
+alert( now );</li><li> // shows current date/time</li></ul></code>
+        <h5>Access date components</h5>
+        <p>There are methods to access the year, month and so on from the Date object:</p><ul><li>getFullYear()</li><li>
+Get the year (4 digits)</li><li>getMonth()</li><li>Get the month, from 0 to 11.</li><li>getDate()</li><li>Get the day of month, from 1 to 31, the name of the method does look a little bit strange.</li><li>getHours(), getMinutes(), getSeconds(), getMilliseconds()</li><li> Get the corresponding time components.</li></ul>
+        <h5>Setting date components</h5><p>The following methods allow to set date/time components:</p><ul><li>
+
+        setFullYear(year, [month], [date])</li><li>setMonth(month, [date])</li><li>setDate(date)</li><li>setHours(hour, [min], [sec], [ms])</li><li>setMinutes(min, [sec], [ms])</li><li>setSeconds(sec, [ms])</li><li>setMilliseconds(ms)</li><li>
+setTime(milliseconds) (sets the whole date by milliseconds since 01.01.1970 UTC)</li><li>Every one of them except setTime() has a UTC-variant, for instance: setUTCHours().</li><li>
+
+As we can see, some methods can set multiple components at once, for example setHours. The components that are not mentioned are not modified.</li></ul>       
+      </article>
+    </section>
+
+    <section class="main-section" id="advanced-working-with-functions">
+      <header> Advanced working with functions</header>
+        <article>
+      <h3 id="functions"> Functions</h3><p>Quite often we need to perform a similar action in many places of the script. For example, we need to show a nice-looking message when a visitor logs in, logs out and maybe somewhere else. Functions are the main “building blocks” of the program. They allow the code to be called many times without repetition. We’ve already seen examples of built-in functions, like alert(message), prompt(message, default) and confirm(question). But we can create functions of our own as well.</p><p>Function Declaration : To create a function we can use a function declaration. It looks like this:</p>
+      <code><ul><li>function showMessage() {</li><li> alert( 'Hello everyone!' );</li><li>}</li></ul></code><p>Our new function can be called by its name: showMessage().</p><code><ul><li>function showMessage() {</li><li>alert( 'Hello everyone!' );</li><li>}</li><li>showMessage();</li><li>showMessage();</li></ul></code>
+      <p>Returning a value : A function can return a value back into the calling code as the result. The simplest example would be a function that sums two values:</p> <code><ul><li>function sum(a, b) {</li><li>  return a + b;</li><li>}</li><li>let result = sum(1, 2);</li><li>alert( result ); // 3</li></ul></code>
+      <he id="naming_functions">Naming a functions</h3><p>
+Functions are actions. So their name is usually a verb. It should be brief, as accurate as possible and describe what the function does, so that someone reading the code gets an indication of what the function does. It is a widespread practice to start a function with a verbal prefix which vaguely describes the action. There must be an agreement within the team on the meaning of the prefixes. </p> <p>For instance, functions that start with "show" usually show something. Function starting with… </p><ul>
+<li>"get…" – return a value,</li><li>
+"calc…" – calculate something,</li><li>
+"create…" – create something,</li><li>
+"check…" – check something and return a boolean, etc.</li></ul><p>
+Examples of such names:</p>
+      <code><ul><li>showMessage(..) // shows a message</li><li>getAge(..) / returns the age (gets it somehow)</li><li>calcSum(..) / calculates a sum and returns the result</li><li>createForm(..) / creates a form (and usually returns it)</li><li>checkPermission(..) // checks a permission, returns true/false</li></ul></code>
+      <p>Values passed to a function as parameters are copied to its local variables.
+A function may access outer variables. But it works only from inside out. The code outside of the function doesn’t see its local variables. A function can return a value. If it doesn’t, then its result is undefined. </p><p>To make the code clean and easy to understand, it’s recommended to use mainly local variables and parameters in the function, not outer variables. It is always easier to understand a function which gets parameters, works with them and returns a result than a function which gets no parameters, but modifies outer variables as a side-effect.</p>
+
+<h5>Functions naming:</h5><p>A name should clearly describe what the function does. When we see a function call in the code, a good name instantly gives us an understanding what it does and returns.
+A function is an action, so function names are usually verbal. There exist many well-known function prefixes like create…, show…, get…, check… and so on. Use them to hint what a function does. Functions are the main building blocks of scripts. Now we’ve covered the basics, so we actually can start creating and using them. But that’s only the beginning of the path. We are going to return to them many times, going more deeply into their advanced features.</p>       
+      </article>
+    </section>
+
+    <section class="main-section" id="object-properties-configuration">
+      <header> Object properties configuration</header>
+      <article>
+       <h3 id="Property_flags_descriptors">Property flags and descriptors</h3>
+        <p>As we know, objects can store properties.
+
+Until now, a property was a simple “key-value” pair to us. But an object property is actually a more flexible and powerful thing.
+
+In this chapter we’ll study additional configuration options, and in the next we’ll see how to invisibly turn them into getter/setter functions.</p>
+        <h5>Property flags</h5><p>Object properties, besides a value, have three special attributes (so-called “flags”): </p><ul><li>
+
+writable – if true, the value can be changed, otherwise it’s read-only.</li><li>
+enumerable – if true, then listed in loops, otherwise not listed.</li><li>
+configurable – if true, the property can be deleted and these attributes can be modified, otherwise not.</li><li>
+We didn’t see them yet, because generally they do not show up. When we create a property</li><li> “the usual way”, all of them are true. But we also can change them anytime.</li></ul><p>
+
+First, let’s see how to get those flags.
+
+The method Object.getOwnPropertyDescriptor allows to query the full information about a property.
+
+The syntax is:</p>
+        <code>let descriptor = Object.getOwnPropertyDescriptor(obj, propertyName);</code><p>obj : The object to get information from.</p><p>
+propertyName : The name of the property. </p><p>
+The returned value is a so-called “property descriptor” object: it contains the value and all the flags.</p>                
+        
+        <h3 id="Property_getter_setters"> Property getters and setters</h3>
+        <p>There are two kinds of object properties.
+
+The first kind is data properties. We already know how to work with them. All properties that we’ve been using until now were data properties.
+
+The second type of properties is something new. It’s accessor properties. They are essentially functions that execute on getting and setting a value, but look like regular properties to an external code.</p>
+        <h5>Getters and setters</h5><p>Accessor properties are represented by “getter” and “setter” methods. In an object literal they are denoted by get and set:</p><code><ul><li>let obj = {</li><li>get propName() {</li><li> // getter, the code executed on getting </li><li>obj.propName</li><li>},</li><li> set propName(value) {</li><li>// setter, the code executed on setting </li><li>obj.propName = value</li><li>}};</li></ul></code> 
+      </article>
+    </section>
+
+    <section class="main-section" id="prototype-inheritance">
+      <header> Prototype, inheritance</header>
+      <article>
+        <h3 id="Prototypal_inheritance"> Prototypal inheritance</h3>
+        <p>In programming, we often want to take something and extend it.
+
+For instance, we have a user object with its properties and methods, and want to make admin and guest as slightly modified variants of it. We’d like to reuse what we have in user, not copy/reimplement its methods, just build a new object on top of it.
+
+Prototypal inheritance is a language feature that helps in that.</p><h5>[[Prototype]]</h5><p>In JavaScript, objects have a special hidden property [[Prototype]] (as named in the specification), that is either null or references another object. That object is called “a prototype”. The prototype is a little bit “magical”. When we want to read a property from object, and it’s missing, JavaScript automatically takes it from the prototype. In programming, such thing is called “prototypal inheritance”. Many cool language features and programming techniques are based on it.</p><p>
+
+The property [[Prototype]] is internal and hidden, but there are many ways to set it. One of them is to use the special name __proto__, like this:</p>
+        <code><ul><li>let animal = { </li><li>eats:  </li><li>}; </li><li>let rabbit = { </li><li>jumps: true </li><li>
+}; </li><li>rabbit.__proto__ = animal;</li></ul></code>        
+        
+        <h3 id="Prototype_methods"> Prototype methods, objects without __proto__</h3>
+           <p>In the first chapter of this section, we mentioned that there are modern methods to setup a prototype.
+
+The __proto__ is considered outdated and somewhat deprecated (in browser-only part of the JavaScript standard).
+
+The modern methods are:</p><ul><li>Object.create(proto[, descriptors]) – creates an empty object with given proto as [[Prototype]] and optional property descriptors.</li><li>
+Object.getPrototypeOf(obj) – returns the [[Prototype]] of obj.</li><li>
+Object.setPrototypeOf(obj, proto) – sets the [[Prototype]] of obj to proto.</li></ul>
+        <p>These should be used instead of __proto__.
+
+For instance:</p>
+        <code><ul><li>let animal = {</li><li>eats: true  </li><li>}  </li><li>// create a new object with animal as a prototype  </li><li>et rabbit = Object.create(animal);  </li><li>alert(rabbit.eats); // true  </li><li>alert(Object.getPrototypeOf(rabbit) === animal); // true  </li><li>Object.setPrototypeOf(rabbit, {}); // change the prototype of rabbit to {}</li></ul></code>
+      </article>
+    </section>
+
+    <section class="main-section" id="classes">
+      <header> Classes</header>
+      <article>
+        <h3 id="Class_syntax"> Class basic syntax</h3>
+           <p>In practice, we often need to create many objects of the same kind, like users, or goods or whatever.
+
+As we already know from the chapter Constructor, operator "new", new function can help with that.
+
+But in the modern JavaScript, there’s a more advanced “class” construct, that introduces great new features which are useful for object-oriented programming.</p>
+        <h5> The "class" syntax </h5><code><ul><li>class MyClass { </li><li>// class methods </li><li>
+  constructor() { ... }</li><li>method1() { ... }</li><li>
+  method2() { ... }</li><li>method3() { ... }</li><li>...</li><li>}/li></ul></code>
+        <h5> Class Expression</h5><p>Just like functions, classes can be defined inside another expression, passed around, returned, assigned, etc.
+
+Here’s an example of a class expression:</p><code><ul><li>let User = class { </li><li>sayHi() {</li><li>alert("Hello");</li><li>}</li><li>};</li></ul></code>
+        
+        <h3 id="Class_inheritance"> Class inheritance </h3>
+        <p>Class inheritance is a way for one class to extend another class.
+
+So we can create new functionality on top of the existing.</p>
+        <h5>The “extends” keyword</h5>
+        <code><ul><li>class Animal { </li><li>constructor(name) {</li><li>this.speed = 0;</li><li>this.name = name;</li><li>}</li><li>run(speed) {</li><li>    this.speed = speed;</li><li>alert(`${this.name} runs with speed </li><li>${this.speed}.`);</li><li>  }</li><li>  stop() {</li><li>    this.speed = 0;</li><li>    alert(`${this.name} stands still.`);</li><li>  }</li><li>}</li><li>let animal = new Animal("My animal");</li></ul></code>
+        <h5>Overriding a method</h5><p>Now let’s move forward and override a method. By default, all methods that are not specified in class Rabbit are taken directly “as is” from class Animal.
+
+But if we specify our own method in Rabbit, such as stop() then it will be used instead:</p>
+        <code><ul><li>class Rabbit extends Animal {</li><li>stop() {</li><li>//...now this will be used for rabbit.stop()</li><li>// instead of stop() from class Animal</li><li>}          }</li></ul></code>
+          <h5>Overriding constructor</h5><p>With constructors it gets a little bit tricky.
+
+Until now, Rabbit did not have its own constructor.
+
+According to the specification, if a class extends another class and has no constructor, then the following “empty” constructor is generated:</p>
+        <code><ul><li>class Rabbit extends Animal {</li><li> // generated for extending classes without own </li><li>constructors</li><li>constructor(...args) {</li><li>uper(...args);</li><li>  }</li><li>}</li></ul></code>
+        <h3 id="extending_classes">Extending built-in classes</h3><p>Built-in classes like Array, Map and others are extendable also.
+
+For instance, here PowerArray inherits from the native Array:</p><code><ul><li>// add one more method</li><li> to it (can do more) </li><li>class PowerArray extends Array {  </li><li>isEmpty() {</li><li>return this.length === 0;</li><li>  }</li><li>}</li><li>let arr = new PowerArray(1, 2, 5, 10, 50);</li><li>alert(arr.isEmpty()); // false</li><li>
+let filteredArr = arr.filter(item => item >= 10);</li><li>alert(filteredArr); // 10, 50</li><li>alert(filteredArr.isEmpty()); // false</li></ul></code><p>Please note a very interesting thing. Built-in methods like filter, map and others – return new objects of exactly the inherited type PowerArray. Their internal implementation uses the object’s constructor property for that.
+
+In the example above,</p><code>arr.constructor === PowerArray</code><p>When arr.filter() is called, it internally creates the new array of results using exactly arr.constructor, not basic Array. That’s actually very cool, because we can keep using PowerArray methods further on the result.</p>
+      </article>
+    </section>
+
+    <section class="main-section" id="error-handling">
+      <header> Error handling</header>
+      <article>
+        <h3 id="try_catch"> Error handling, try..catch</h3>
+        <p>No matter how great we are at programming, sometimes our scripts have errors. They may occur because of our mistakes, an unexpected user input, an erroneous server response, and for a thousand other reasons.
+
+Usually, a script “dies” (immediately stops) in case of an error, printing it to console.
+
+But there’s a syntax construct try..catch that allows us to “catch” errors so the script can, instead of dying, do something more reasonable.</p>
+        <h5>The “try…catch” syntax</h5><code><ul><li>try {</li><li>  // code...</li><li>} catch (err) {</li><li>  // error handling</li><li>}</li></ul></code><p>It works like this:<br>
+
+First, the code in try {...} is executed.<br>
+If there were no errors, then catch(err) is ignored: the execution reaches the end of try and goes on, skipping catch.<br>
+If an error occurs, then the try execution is stopped, and control flows to the beginning of catch(err). The err variable (we can use any name for it) will contain an error object with details about what happened.</p>
+        <h5>“Throw” operator</h5>The throw operator generates an error.
+
+The syntax is: <code>throw <error object></code>
+        <h5>try…catch…finally</h5><p>Wait, that’s not all.
+
+The try..catch construct may have one more code clause: finally.
+
+If it exists, it runs in all cases:<br>
+
+after try, if there were no errors<br>
+after catch, if there were errors.<br>
+The extended syntax looks like this:</p>
+        <code><ul><li>try {  </li><li>   ... try to execute the code ...</li><li>} catch(e) {</li><li>.. handle errors ...</li><li>} finally {</li><li>   ... execute always ...</li><li>}</li></ul></code>       
+                
+        <h3 id="extending_Errors"> Custom errors, extending Errors</h3>
+        <p>When we develop something, we often need our own error classes to reflect specific things that may go wrong in our tasks. For errors in network operations we may need HttpError, for database operations DbError, for searching operations NotFoundError and so on.
+
+Our errors should support basic error properties like message, name and, preferably, stack. But they also may have other properties of their own, e.g. HttpError objects may have a statusCode property with a value like 404 or 403 or 500.
+
+JavaScript allows to use throw with any argument, so technically our custom error classes don’t need to inherit from Error. But if we inherit, then it becomes possible to use obj instanceof Error to identify error objects. So it’s better to inherit from it.
+
+As the application grows, our own errors naturally form a hierarchy. For instance, HttpTimeoutError may inherit from HttpError, and so on.</p>
+        <h5> Extending Error</h5>
+        <p>As an example, let’s consider a function readUser(json) that should read JSON with user data.
+
+Here’s an example of how a valid json may look:</p>
+        <code>let json = `{ "name": "John", "age": 30 }`;</code><p>Internally, we’ll use JSON.parse. If it receives malformed json, then it throws SyntaxError. But even if json is syntactically correct, that doesn’t mean that it’s a valid user, right? It may miss the necessary data. For instance, it may not have name and age properties that are essential for our users.</p>    
+      </article>
+    </section>
+
+    <section class="main-section" id="modules">
+      <header> Modules</header>
+      <article>
+        <h3 id="modules_introduction"> Modules, introduction</h3>
+        <p>As our application grows bigger, we want to split it into multiple files, so called “modules”. A module usually contains a class or a library of functions.
+
+For a long time, JavaScript existed without a language-level module syntax. That wasn’t a problem, because initially scripts were small and simple, so there was no need.
+
+But eventually scripts became more and more complex, so the community invented a variety of ways to organize code into modules, special libraries to load modules on demand.
+
+For instance:</p><ul><li>AMD – one of the most ancient module systems, initially implemented by the library require.js.</li><li>
+CommonJS – the module system created for Node.js server.</li><li>
+UMD – one more module system, suggested as a universal one, compatible with AMD and CommonJS.</li></ul><p>Now all these slowly become a part of history, but we still can find them in old scripts.
+
+The language-level module system appeared in the standard in 2015, gradually evolved since then, and is now supported by all major browsers and in Node.js.</p>
+        <h5>What is a module?</h5><p>A module is just a file. One script is one module.
+
+Modules can load each other and use special directives export and import to interchange functionality, call functions of one module from another one:</p><ul><li>export keyword labels variables and functions that should be accessible from outside the current module.</li>
+        <li>import allows the import of functionality from other modules.</li></ul><p>For instance, if we have a file sayHi.js exporting a function:</p><code><ul><li>// 📁 sayHi.js</li><li>export function sayHi(user) {</li><li>  alert(`Hello, ${user}!`);</li><li>}</li></ul></code>
+        <p>…Then another file may import and use it: </p>
+        <code><ul><li>/ 📁 main.js</li><li>import {sayHi} from './sayHi.js';</li><li>alert(sayHi); // function...</li><li>sayHi('John'); // Hello, John!</li></ul></code>
+        <p>The import directive loads the module by path ./sayHi.js relative to the current file, and assigns exported function sayHi to the corresponding variable.</p>
+        
+        <h3 id="export_import"> Export and Import</h3><p>Export and import directives have several syntax variants.
+
+In the previous article we saw a simple use, now let’s explore more examples.</p>
+        <h5>Import *</h5><p>Usually, we put a list of what to import in curly braces import {...}, like this:</p> <code><ul><li>// 📁 main.js</li><li>import {sayHi, sayBye} from './say.js';</li><li>sayHi('John'); // Hello, John!</li><li>sayBye('John'); // Bye, John!</li></ul></code>
+        <p>But if there’s a lot to import, we can import everything as an object using import * as <obj>, for instance:</p> <code><ul><li>// 📁 main.js</li><li>import * as say from './say.js';</li><li>say.sayHi('John');</li><li>say.sayBye('John');</li></ul></code>
+          <h5>Import “as”</h5><p>We can also use as to import under different names.
+
+For instance, let’s import sayHi into the local variable hi for brevity, and import sayBye as bye:</p>
+        <code><ul><li>// 📁 main.js</li><li>import {sayHi as hi, sayBye as bye} from './say.js';</li><li>hi('John'); // Hello, John!</li><li>bye('John'); // Bye, John!</li></ul></code>
+        <h5>Export “as”</h5><p>The similar syntax exists for export.
+
+Let’s export functions as hi and bye:</p><code><ul><li>// 📁 say.js</li><li>
+...</li><li>
+export {sayHi as hi, sayBye as bye};</li></ul></code>
+        <h5>Export default</h5><p>In practice, there are mainly two kinds of modules.
+
+Modules that contain a library, pack of functions, like say.js above.
+Modules that declare a single entity, e.g. a module user.js exports only class User.
+Mostly, the second approach is preferred, so that every “thing” resides in its own module.
+
+Naturally, that requires a lot of files, as everything wants its own module, but that’s not a problem at all. Actually, code navigation becomes easier if files are well-named and structured into folders.
+
+Modules provide a special export default (“the default export”) syntax to make the “one thing per module” way look better.
+
+Put export default before the entity to export:</p>
+        <code><ul><li>// 📁 user.js</li><li>export default class User { // just add "default"</li><li>constructor(name) {</li><li>this.name = name;</li><li> }</li><li>}</li></ul></code><p>There may be only one export default per file.
+
+…And then import it without curly braces:</p><code><ul><li>// 📁 main.js</li><li>import User from './user.js'; // not {User}, just User</li><li>new User('John');</li></ul></code>
+        <p>Imports without curly braces look nicer. A common mistake when starting to use modules is to forget curly braces at all. So, remember, import needs curly braces for named exports and doesn’t need them for the default one.</p>
+        
+          
+          <h3 id="dynamic_imports">Dynamic imports</h3>
+       <p>Export and import statements that we covered in previous chapters are called “static”. The syntax is very simple and strict.
+
+First, we can’t dynamically generate any parameters of import.
+
+The module path must be a primitive string, can’t be a function call. This won’t work:</p>
+        <code>import ... from getModuleName(); // Error, only from "string" is allowed
+</code> 
+        <p>Second, we can’t import conditionally or at run-time:</p> 
+        <code><ul><li>if(...) {</li><li>import ...; // Error, not allowed!</li><li>}</li><li>{</li><li>
+  import ...; // Error, we can't put import in any block</li><li>}</li></ul></code>
+      <p>That’s because import/export aim to provide a backbone for the code structure. That’s a good thing, as code structure can be analyzed, modules can be gathered and bundled into one file by special tools, unused exports can be removed (“tree-shaken”). That’s possible only because the structure of imports/exports is simple and fixed.</p>
+      </article>
+    </section>
+
+    <section class="main-section" id="miscellaneous">
+      <header> Miscellaneous</header>
+      <article>
+        <h3 id="proxy_reflect"> Proxy and Reflect</h3>
+        <p>A Proxy object wraps another object and intercepts operations, like reading/writing properties and others, optionally handling them on its own, or transparently allowing the object to handle them.
+
+Proxies are used in many libraries and some browser frameworks. We’ll see many practical applications in this article.</p>
+        <h5> Proxy</h5> 
+        <code>let proxy = new Proxy(target, handler)</code>
+        <p>target – is an object to wrap, can be anything, including functions.<br>
+handler – proxy configuration: an object with “traps”, methods that intercept operations. – e.g. get trap for reading a property of target, set trap for writing a property into target, and so on.</p>
+        <h5>Reflect</h5><p>Reflect is a built-in object that simplifies creation of Proxy.
+
+It was said previously that internal methods, such as [[Get]], [[Set]] and others are specification-only, they can’t be called directly.
+
+The Reflect object makes that somewhat possible. Its methods are minimal wrappers around the internal methods.</p><code><ul><li>let user = {};</li><li>Reflect.set(user, 'name', 'John');</li><li>alert(user.name); // John</li></ul></code><p>In particular, Reflect allows us to call operators (new, delete…) as functions (Reflect.construct, Reflect.deleteProperty, …). That’s an interesting capability, but here another thing is important.</p>
+        
+        <h3 id="eval"> Eval: run a code string</h3>
+        <p>The built-in eval function allows to execute a string of code.
+
+The syntax is:</p><code>let result = eval(code);</code>
+        <h5> Using "eval"</h5>
+        <p>In modern programming eval is used very sparingly. It’s often said that “eval is evil”.
+
+The reason is simple: long, long time ago JavaScript was a much weaker language, many things could only be done with eval. But that time passed a decade ago.
+
+Right now, there’s almost no reason to use eval. If someone is using it, there’s a good chance they can replace it with a modern language construct or a JavaScript Module.
+
+Please note that its ability to access outer variables has side-effects.
+
+Code minifiers (tools used before JS gets to production, to compress it) rename local variables into shorter ones (like a, b etc) to make the code smaller. That’s usually safe, but not if eval is used, as local variables may be accessed from eval’ed code string. So minifiers don’t do that renaming for all variables potentially visible from eval. That negatively affects code compression ratio.
+
+Using outer local variables inside eval is also considered a bad programming practice, as it makes maintaining the code more difficult.
+
+There are two ways how to be totally safe from such problems.</p><ul><li>If eval’ed code doesn’t use outer variables, please call eval as window.eval(...):
+
+This way the code is executed in the global scope:  <code><ul><li>let x = 1;</li><li>{</li><li>let x = 5;</li><li>window.eval('alert(x)'); // 1 (global variable)</li><li>}</li></ul></code></li><li>If eval’ed code needs local variables, change eval to new Function and pass them as arguments: <code><ul><li>let f = new Function('a', 'alert(a)');</li><li>f(5); // 5</li></ul></code></li></ul>
+        <p>The new Function construct is explained in the chapter The "new Function" syntax. It creates a function from a string, also in the global scope. So it can’t see local variables. But it’s so much clearer to pass them explicitly as arguments, like in the example above.</p>
+        
+        <h3 id="currying"> Currying</h3>
+        <p>Currying is an advanced technique of working with functions. It’s used not only in JavaScript, but in other languages as well.
+
+Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
+
+Currying doesn’t call a function. It just transforms it.
+
+Let’s see an example first, to better understand what we’re talking about, and then practical applications.
+
+We’ll create a helper function curry(f) that performs currying for a two-argument f. In other words, curry(f) for two-argument f(a, b) translates it into a function that runs as f(a)(b):</p>
+        <code><ul><li>function curry(f) { // curry(f) does the currying transform</li><li>return function(a) {</li><li>
+    return function(b) {</li><li>return f(a, b);</li><li>};</li><li>};</li><li>}</li><li>// usage</li><li>function sum(a, b) {</li><li>return a + b;</li><li>}</li><li>let curriedSum = curry(sum);</li><li>alert( curriedSum(1)(2) ); // 3</li><ul></code>
+        <p>As you can see, the implementation is straightforward: it’s just two wrappers.
+
+The result of curry(func) is a wrapper function(a).
+When it is called like curriedSum(1), the argument is saved in the Lexical Environment, and a new wrapper is returned function(b).
+Then this wrapper is called with 2 as an argument, and it passes the call to the original sum.</p>
+      </article>
+    </section>
+
+    <section class="main-section" id="reference">
+      <header> Reference</header>
+      <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from :
+          <a id="reference-a"
+            href="https://javascript.info/js"
+            target="_blank"
+            >The JavaScript language</a
+          >
+        </li>
+      </ul>
+      </article>
+    </section>  
+  </main>
+</body>
+
+</html>
