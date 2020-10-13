@@ -219,7 +219,7 @@ nav>ul {
 
 @media (max-width: 550px) {
   #features .descp {
-    widht: 100%;
+    width: 100%;
     text-align: center;
     padding: 0;
     height: 180px;
