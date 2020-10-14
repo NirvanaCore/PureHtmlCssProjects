@@ -6,7 +6,7 @@ This pages i created to learn html and css from basic to advance by my own. Crea
 --I tried to take few topic from JavaScript course and tried to build a documentation page. Although i didn't include much of the things its just i tried to make a replica.
 
 ## Landing Page
--- Blog Page just a static web page for a Women's Blog.
+-- Blog Page just a static web page for a Women's Blog. Using Iframe, making Sticky header to different transition for links and buttons. 
 
 ## Basic Portfolio
 --

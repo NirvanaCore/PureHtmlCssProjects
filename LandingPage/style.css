@@ -74,7 +74,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  min-height: 60px;
+  max-height: 80px;
   padding: 5px 25px;
   display: flex;
   justify-content: space-around;
@@ -153,6 +153,11 @@ nav>ul {
   }
 }
 
+.container{
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+}
+
 #form-name {
   color: #e9e8f7;
   display: flex;
@@ -160,7 +165,7 @@ nav>ul {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 250px;
+  height: auto;
   margin-top: 70px;
 }
 
@@ -271,7 +276,7 @@ nav>ul {
   text-align: center;
   width: calc(100% / 3);
   margin: 10px;
-  border: 2px solid #000000;
+  border: 2px solid #9c9a9a;
   border-radius: 7px;
 }
 
@@ -319,17 +324,22 @@ nav>ul {
 }
 
 .footer-distributed {
+  position: fixed;
+  bottom: 0px;
+  max-height: 250px ;
   background: rgb(0, 0, 0);
   width: 100%;
-  font: bold 16px sans-serif;
+  font: normal 10px sans-serif;
   text-align: left;
-  padding: 2rem;
+  padding: 1rem;
   overflow: hidden;
+  margin-bottom: 0px;
 }
 
 /* Footer left */
 
 .footer-distributed .footer-left {
+  position: relative;
   float: left;
 }
 
@@ -397,6 +407,7 @@ cursor: pointer;
 /* Footer Right */
 
 .footer-distributed .footer-right {
+  position: relative;
   float: right;
 }
 
