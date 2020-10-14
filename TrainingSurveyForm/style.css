@@ -1,0 +1,175 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #eae9f0;
+  margin: 0;
+}
+
+/* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: #a6908f;
+  background-image: linear-gradient(115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)),
+    url(https://drive.google.com/uc?id=1e9BLKKj2aQQo31QtT1L5eHAaBELXdMKO);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+
+  font-size: 30px;
+  font-weight: 550;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 15px;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 6px;
+  border-radius: 5px;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 1px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border-radius: 5px;
+  ;
+}
+
+.container {
+  width: 100%;
+  margin: 32px auto 0 auto;
+}
+
+@media(min-width: 476px) {
+  .container {
+    max-width: 440px;
+  }
+}
+
+@media(min-width: 668px) {
+  .container {
+    max-width: 620px;
+  }
+}
+
+.header {
+  padding: 0 5px;
+  margin-bottom: 25px;
+}
+
+.text-description {
+  font-style: italic;
+  text-align: center;
+  font-weight: 200;
+}
+
+.clue {
+  margin-left: 2px;
+  font-size: 10px;
+  color: #D2D5D2;
+}
+
+.text-title {
+  text-align: center;
+  font-weight: 400;
+}
+
+form {
+  color: #000006;
+  background: #493680;
+  padding: 25px .5px;
+  border-radius: 5px;
+}
+
+@media(min-width: 480px) {
+  form {
+    padding: 25px;
+  }
+}
+
+.form-group {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 15px 7px;
+  color: #eae9f0;
+  background-color: #493680;
+  background-clip: padding-box;
+  border: .5px solid #493680;
+  border-radius: 2px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: none;
+  border-radius: 10px;
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 6px;
+  min-height: 15px;
+  min-width: 12px;
+}
+
+.input-textarea {
+  background-color: #eae9f0;
+  min-height: 120px;
+  width: 100%;
+  padding: 6px;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 7px;
+  background: #3e076e;
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}
