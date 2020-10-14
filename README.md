@@ -14,5 +14,5 @@ This pages i created to learn html and css from basic to advance by my own. Crea
 ## ScreenShort Image
 -- A mobile screen short and converted to responsive web page.
 
-## Legal 
---10 design in 1 design hour done by Andrew Twarog. just tried to recreate 1 from them.
+## Women-Legal 
+--10 design in 1 design hour done by Andrew Twarog. just tried to recreate 1 from them. its about a lawyer page deal with different area short and cute.
