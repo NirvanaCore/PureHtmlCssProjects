@@ -97,7 +97,7 @@ footer {
 @media (max-width: 890px) {
   #image {
     max-width: 100%;
-    max-height: auto;
+    max-height: 100%;
     margin: auto;
   }
 
