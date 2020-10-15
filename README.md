@@ -17,7 +17,7 @@ This pages i created to learn html and css from basic to advance by my own. Crea
 --10 design in 1 hour done by Andrew Twarog. just tried to recreate 1 from them. its about a lawyer page,deal with different area short and cute.
 
 ##  6. Training Survey Form
---
+-- Survey form design for a software company that running bootcamps  checkboxes, radio button, scroll menu , text area and other functions used.
 
 ## 7. NewsLetter Page
 -- 
