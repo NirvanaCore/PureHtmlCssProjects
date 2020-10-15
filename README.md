@@ -1,5 +1,6 @@
 ## Responsive-WebPages
 This pages i created to learn html and css from basic to advance by my own. Creating different Responsive Web Page Using only  HTML and CSS includes-
+
 ## 1. Tribute Page 
 --Its a Tribute to a famous Well Known Personality former President of India Dr. APJ Abdul Kalam.
 
@@ -13,20 +14,19 @@ This pages i created to learn html and css from basic to advance by my own. Crea
 -- A mobile screen short and converted to responsive web page.
 
 ## 5. Women-Legal 
---10 design in 1 design hour done by Andrew Twarog. just tried to recreate 1 from them. its about a lawyer page deal with different area short and cute.
+--10 design in 1 hour done by Andrew Twarog. just tried to recreate 1 from them. its about a lawyer page,deal with different area short and cute.
 
 ##  6. Training Survey Form
 --
 
 ## 7. NewsLetter Page
---
+-- 
 
 ## 8. Twitter Sign/Login Page
 --
 
 ## 9. NewsPaper Page
---
-
+-- Created a newsPaper web page or template, Using Flex.
 
 ## 10. Basic Portfolio Page
 --
