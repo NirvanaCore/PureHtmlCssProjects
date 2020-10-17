@@ -220,3 +220,14 @@ button:active{
 button:focus{
   outline: none;
 }
+
+@media (max-width:980px){
+  .container, .form-container, .overlay-container, .social-container, #signup, #login, input, .input-field{
+    margin: 0;
+    padding: 0;
+    float:none;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
