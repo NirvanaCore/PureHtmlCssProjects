@@ -23,7 +23,7 @@ This pages i created to learn html and css from basic to advance by my own. Crea
 -- A copy of school newsletter-template created. 
 
 ## 8. Twitter Sign/Login Page
---
+-- Twitter login Sign Page created. with login function, sign up function ,while other half window cover with twitter icon image.
 
 ## 9. NewsPaper Page
 -- Created a newsPaper web page or template, Using Flex.
