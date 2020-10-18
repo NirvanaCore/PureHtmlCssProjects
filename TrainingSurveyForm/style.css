@@ -6,7 +6,7 @@
 
 body {
   font-family: sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.4;
   color: #ffffff;
@@ -36,19 +36,20 @@ header {
   text-align: center;
   padding: 20px;
 }
+
 header>p{
-  font-size: 1.2rem;
+  font-size: 12px
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   padding-top: 2rem;
   font-weight: 900;
   line-height: 1.2;
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: normal;
 }
 
@@ -61,14 +62,14 @@ p {
 label {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size:10px;
   margin-bottom: 6px;
   border-radius: 5px;
   box-shadow: #787978;
 }
 
 .form-group> label{
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 input,
@@ -76,10 +77,14 @@ button,
 select,
 textarea {
   margin: 1px;
-  padding: 8px;
+  padding: 5px;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 12px;
   line-height: inherit;
+}
+
+#box label{
+  font-size: 1rem;
 }
 
 button {
