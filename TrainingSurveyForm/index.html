@@ -53,7 +53,8 @@
         <option value="swift"> Swift </option>
       </select>
     </div>
-    <div class="form-group">
+
+    <div class="form-group" id="box">
       <p> Which training projects do you have completed ?<span class="clue">(Check all that apply)</span></p>
       <label>
         <input name="project" value="frontend-developer" type="checkbox" class="input-checkbox"> Frontend Developer
@@ -99,7 +100,8 @@
         <input name="project" value="game-developer" type="checkbox" class="input-checkbox"> Game Developer </input>
       </label>
     </div>
-    <div class="form-group">
+
+    <div class="form-group" id="box">
       <p> Are you satisfied from our training Program ?</p>
       <label>
         <input name="program" value="very-satisfied " type="radio" class="input-radio" checked></input> Very Satisfied
@@ -110,7 +112,10 @@
         <input name="program" value="neutral" type="radio" class="input-radio"></input> Netural </label> <label>
         <input name="program" value="unsatisfied" type="radio" class="input-radio"></input> Unsatisfied </label><label>
         <input name="program" value="very-unsatisfied" type="radio" class="input-radio"></input> Very Unsatisfied
-      </label> </div> <div class="form-group">
+      </label>
+    </div> 
+
+      <div class="form-group" id="box">
       <p> How did you hear about this training Program ?</p>
       <label>
         <input name="platform" value="social-media " type="radio" class="input-radio" checked></input> Social media
@@ -121,8 +126,10 @@
         <input name="platform" value="search-engine" type="radio" class="input-radio" ></input> Search Engine </label>
       <label>
         <input name="platform" value="friend" type="radio" class="input-radio"></input> Friend </label> <label>
-        <input name="platform" value="other" type="radio" class="input-radio"></input> other </label </div> <div
-        class="form-group">
+        <input name="platform" value="other" type="radio" class="input-radio"></input> other </label>
+      </div>
+        
+      <div class="form-group" id="box">
       <p> Would you recommend us to a friend ?</p>
       <label>
         <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked></input> Definately
@@ -132,15 +139,17 @@
       <label>
         <input name="user-recommend" value="not-sure" type="radio" class="input-radio"></input> Not sure </label>
     </div>
-    <div>
-      <div class="form-group">
+
+    <div class="form-group">
         <p> Any comments or suggestion ?</p>
         <textarea id="comments" class="input-textarea" name="comment"
           placeholder=" Enter your comment here..."></textarea>
-      </div>
+      </div>           
+      
       <div class="form-group">
         <button type="submit" id="submit" href="#" class="submit-button"> Submit </button>
       </div>      
+
   </form>
 </div>
 </body>
