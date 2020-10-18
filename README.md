@@ -8,7 +8,7 @@ This pages i created to learn html and css from basic to advance by my own. Crea
 --I tried to take few topic from JavaScript course and tried to build a documentation page. Although i didn't include much of the things its just i tried to make a replica.
 
 ## 3. Landing Page
--- Blog Page just a static web page for a Women's Blog. Using Iframe, making Sticky header and footer with different transition for links and buttons. 
+-- Blog Page a static web page for a Women's Blog. Using Iframe, making Sticky header and footer with different transition for links and buttons. Making responsive-header by hiding nav bar inside a icon for mobile view.
 
 ## 4. ScreenShot Image
 -- A mobile screenshot and converted to responsive web page.
