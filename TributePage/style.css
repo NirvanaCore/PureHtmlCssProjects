@@ -9,20 +9,20 @@ body {
 
 #main {
   margin: 20px 5px;
-  padding: 15px;
+  padding: 10px;
   border-radius: 7px;
   background: #0c0c0c;
 }
 
 h1 {
   padding-top: 1rem;
-  font-size: 4rem;
+  font-size: 2rem;
   margin: 0;
 }
 
 p,
 cite {
-  font-size: 1.6rem;
+  font-size: 11px;
 }
 
 a {
@@ -55,7 +55,7 @@ a:hover {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   font-weight: 300;
 }
 
@@ -67,8 +67,8 @@ h3 {
 ul {
   display: flex;
   flex-direction: column;
-  font-size: x-large;
-  max-width: 100rem;
+  font-size: 12px;
+  max-width: 1000px;
   margin: 0 auto 50px auto;
   text-align: left;
   justify-content: center;
@@ -102,13 +102,16 @@ footer {
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     line-height: 1.2;
+  }
+  h3{
+    font-size: 15px;;
   }
 
   p,
   cite {
-    font-size: 1rem;
+    font-size: 10px;
   }
 
   #main {
@@ -131,7 +134,7 @@ footer {
   cite {
     width: auto;
     justify-content: center;
-    margin: 20px;
+    margin: 10px;
     text-align: left;
   }
 }
