@@ -12,8 +12,7 @@
     <img id="header-img" src="./image/jsd.jpg" alt="JS logo" /></div>
 
 		<ul>
-		  <li><a class="nav-link" href="#introduction"> Introduction</a></li>
-		  
+		  <li><a class="nav-link" href="#introduction"> Introduction</a></li>		  
 		  <li><a class="nav-link" href="#jacascript-fundamentals"> Java Script Fundamentals</a></li>
 		  <ol>
 			<li><a class="nav-link" href="#hello-world"> Hello, World !</a></li>
@@ -122,12 +121,13 @@
           <li>JavaScript was initially created as a browser-only language, but is now used in many other environments as well.
           </li>
           <li>Today, JavaScript has a unique position as the most widely-adopted browser language with full integration with HTML/CSS.</li>
-          <li>There are many languages that get “transpiled” to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.</li>
+          <li>There are many languages that get “ transpiled ” to JavaScript and provide certain features. It is
+            recommended to take a look at them, at least briefly, after mastering JavaScript.</li>
         </ul>
       </article>
     </section>
 
-    <section class="main-section" id="jacascript-fundamentals">
+    <section class="main-section" id="javascript-fundamentals">
       <header> Java Script Fundamentals</header>
       <article>
         <h4 id="hello-world"> Hello, World !</h4>
@@ -174,15 +174,10 @@
             <p>Numeric Conversion : Numeric conversion happens in mathematical functions and expressions automatically. For example, when division / is applied to non-numbers:</p><code>alert( "6" / "2" ); // 3, strings are converted to numbers</code>
             <p>We can use the Number(value) function to explicitly convert a value to a number:</p><code><ul><li>let str = "123";</li><li>alert(typeof str); // string</li><li>let num = Number(str); // becomes a number 123</li><li>alert(typeof num); // number</li></ul></code>
             <p>Boolean Conversion : Boolean conversion is the simplest one. It happens in logical operations (later we’ll meet condition tests and other similar things) but can also be performed explicitly with a call to Boolean(value). The conversion rule: Values that are intuitively “empty”, like 0, an empty string, null, undefined, and NaN, become false. Other values become true. For Instance</p><code><ul><li>alert( Boolean(1) ); // true </li><li>alert( Boolean(0) ); // false</li><li>alert( Boolean("hello") ); // true</li><li>alert( Boolean("") ); // false</li></ul></code>
-            <h3 id="comparisons"> Comparisons</h3>
-            <p>We know many comparison operators from maths. In JavaScript they are written like this: <code><ul><li>Greater/less than: a > b, a < b.</li><li> Greater/less than or equals: a >= b, </li><li>a <= b. Equals: a==b, </li></ul></code>
-              <p> please note the double equality sign = means the equality test, while a single one a = b means an assignment. Not equals. In maths the notation is ≠, but in JavaScript it’s written as a != b. In this article we’ll learn more about different types of comparisons, how JavaScript makes them, including important peculiarities.</p>
-              <p>Boolean is the resultAll comparison operators return a boolean value true – means “yes”, “correct” or “the truth”. false – means “no”, “wrong” or “not the truth”. For example:</p>
-              <code><ul> <li>alert( 2 > 1 ); // true (correct)</li><li>alert( 2 == 1 ); // false (wrong)</li><li>alert( 2 != 1 ); // true (correct)</li></ul></code>
+            <h3 id="comparisons"> Comparisons</h3><p>We know many comparison operators from maths. In JavaScript they are written like this: <code><ul><li>Greater/less than: a > b, a < b.</li><li> Greater/less than or equals: a >= b, </li><li>a <= b. Equals: a==b, </li></ul></code><p> please note the double equality sign = means the equality test, while a single one a = b means an assignment. Not equals. In maths the notation is ≠, but in JavaScript it’s written as a != b. In this article we’ll learn more about different types of comparisons, how JavaScript makes them, including important peculiarities.</p>
+              <p>Boolean is the resultAll comparison operators return a boolean value true – means “yes”, “correct” or “the truth”. false – means “no”, “wrong” or “not the truth”. For example:</p><code><ul> <li>alert( 2 > 1 ); // true (correct)</li><li>alert( 2 == 1 ); // false (wrong)</li><li>alert( 2 != 1 ); // true (correct)</li></ul></code>
               <p>String comparison : To see whether a string is greater than another, JavaScript uses the so-called “dictionary” or “lexicographical” order. In other words, strings are compared letter-by-letter. For example:</p>
-              <code><ul><li>alert( 'Z' > 'A' ); // true</li><li>alert( 'Glow' > 'Glee' ); // true</li><li>alert( 'Bee' > 'Be' ); // true</li></ul></code>
-
-              <h3 id="condition-operators"> Conditionl Operators: if, '?'</h3>
+              <code><ul><li>alert( 'Z' > 'A' ); // true</li><li>alert( 'Glow' > 'Glee' ); // true</li><li>alert( 'Bee' > 'Be' ); // true</li></ul></code>  <h3 id="condition-operators"> Conditional Operators: if, '?'</h3>
               <p>To do that, we can use the if statement and the conditional operator ?, that’s also called a “question mark” operator. The “if” statement : The if(...) statement evaluates a condition in parentheses and, if the result is true, executes a block of code. For example:</p>
               <code>
                 <ul>
@@ -241,8 +236,7 @@ So, explanatory comments are usually bad. Which comments are good?</p>
 <h5>Describe the architecture</h5><p>
 Provide a high-level overview of components, how they interact, what’s the control flow in various situations… In short – the bird’s eye view of the code. There’s a special language UML to build high-level architecture diagrams explaining the code. Definitely worth studying.</p><h5>Document function parameters and usage</h5><p>
 There’s a special syntax JSDoc to document a function: usage, parameters, returned value.
-For instance:</p> <code><ul><li>/**</li><li>* Returns x raised to the n-th power.</li><li>*</li><li>* @param {number} x The number to raise.</li><li>* @param {number} n The power, must be a natural number.</li><li>* @return {number} x raised to the n-th power.</li><li>*/</li><li>function pow(x, n) {</li><li>...</li><li>}</li></ul></code>     
-       </article>
+For instance:</p> <code><ul><li>/**</li><li>* Returns x raised to the n-th power.</li><li>*</li><li>* @param {number} x The number to raise.</li><li>* @param {number} n The power, must be a natural number.</li><li>* @return {number} x raised to the n-th power.</li><li>*/</li><li>function pow(x, n) {</li><li>...</li><li>}</li></ul></code></article>
     </section>
 
     <section class="main-section" id="data-types">
@@ -266,7 +260,7 @@ n = 12.345;</li></ul></code>
 let arr = [];</li></ul></code>
         <h5>Internals</h5><p>An array is a special kind of object. The square brackets used to access a property arr[0] actually come from the object syntax. That’s essentially the same as obj[key], where arr is the object, while numbers are used as keys. They extend objects providing special methods to work with ordered collections of data and also the length property. But at the core it’s still an object. Remember, there are only 7 basic types in JavaScript. Array is an object and thus behaves like an object. For instance, it is copied by reference:</p>
         <code><ul><li>let fruits = ["Banana"]</li><li>let arr = fruits; // copy by reference (two variables reference the same array)</li><li>alert( arr === fruits ); // true</li><li>arr.push("Pear"); // modify the array by reference</li><li>alert( fruits ); // Banana, Pear - 2 items now</li>/ul></code>
-        <h5> A word abbout length </h5><p>The length property automatically updates when we modify the array. To be precise, it is actually not the count of values in the array, but the greatest numeric index plus one. For instance, a single element with a large index gives a big length:</p>
+        <h5> A word about length </h5><p>The length property automatically updates when we modify the array. To be precise, it is actually not the count of values in the array, but the greatest numeric index plus one. For instance, a single element with a large index gives a big length:</p>
         <code> <ul><li>let fruits = [];</li><li>fruits[123] = "Apple";</li><li>alert( fruits.length ); // 124</li></ul></code>
         <h5> Multidimensional</h5><li>Arrays can have items that are also arrays. We can use it for multidimensional arrays, for example to store matrices:</li><code><ul><li>let matrix = [</li><li>  [1, 2, 3],</li><li>[4, 5, 6],</li><li>[7, 8, 9]</li><li>];alert( matrix[1][1] ); // 5, the central element</li></ul></code>
         <h5>tostring</h5><p>Arrays have their own implementation of toString method that returns a comma-separated list of elements.
@@ -275,9 +269,7 @@ For instance:</p><code><ul><li>let arr = [1, 2, 3]; </li><li>
 
 alert( arr ); // 1,2,3</li><li>
 alert( String(arr) === '1,2,3' ); // true</li></ul></code>
-        
-        
-         <h3 id="maps_sets"> Map and Set </h3>
+<h3 id="maps_sets"> Map and Set </h3>
         <p>Now we’ve learned about the following complex data structures: </p><ul><li> Objects for storing keyed collections.</li><li> Arrays for storing ordered collections.</li></ul><p>
 But that’s not enough for real life. That’s why Map and Set also exist.</p>
         <h5>Map</h5> <p>Map is a collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any type. Methods and properties are:</p>
@@ -338,7 +330,7 @@ A function is an action, so function names are usually verbal. There exist many 
     <section class="main-section" id="object-properties-configuration">
       <header> Object properties configuration</header>
       <article>
-       <h3 id="Property_flags_descriptors">Property flags and descriptors</h3>
+      <h3 id="Property_flags_descriptors">Property flags and descriptors</h3>
         <p>As we know, objects can store properties.
 
 Until now, a property was a simple “key-value” pair to us. But an object property is actually a more flexible and powerful thing.
@@ -385,7 +377,7 @@ The property [[Prototype]] is internal and hidden, but there are many ways to se
 }; </li><li>rabbit.__proto__ = animal;</li></ul></code>        
         
         <h3 id="Prototype_methods"> Prototype methods, objects without __proto__</h3>
-           <p>In the first chapter of this section, we mentioned that there are modern methods to setup a prototype.
+          <p>In the first chapter of this section, we mentioned that there are modern methods to setup a prototype.
 
 The __proto__ is considered outdated and somewhat deprecated (in browser-only part of the JavaScript standard).
 
@@ -403,7 +395,7 @@ For instance:</p>
       <header> Classes</header>
       <article>
         <h3 id="Class_syntax"> Class basic syntax</h3>
-           <p>In practice, we often need to create many objects of the same kind, like users, or goods or whatever.
+          <p>In practice, we often need to create many objects of the same kind, like users, or goods or whatever.
 
 As we already know from the chapter Constructor, operator "new", new function can help with that.
 
@@ -430,7 +422,7 @@ But if we specify our own method in Rabbit, such as stop() then it will be used 
 Until now, Rabbit did not have its own constructor.
 
 According to the specification, if a class extends another class and has no constructor, then the following “empty” constructor is generated:</p>
-        <code><ul><li>class Rabbit extends Animal {</li><li> // generated for extending classes without own </li><li>constructors</li><li>constructor(...args) {</li><li>uper(...args);</li><li>  }</li><li>}</li></ul></code>
+        <code><ul><li>class Rabbit extends Animal {</li><li> // generated for extending classes without own </li><li>constructors</li><li>constructor(...args) {</li><li>upper(...args);</li><li>  }</li><li>}</li></ul></code>
         <h3 id="extending_classes">Extending built-in classes</h3><p>Built-in classes like Array, Map and others are extendable also.
 
 For instance, here PowerArray inherits from the native Array:</p><code><ul><li>// add one more method</li><li> to it (can do more) </li><li>class PowerArray extends Array {  </li><li>isEmpty() {</li><li>return this.length === 0;</li><li>  }</li><li>}</li><li>let arr = new PowerArray(1, 2, 5, 10, 50);</li><li>alert(arr.isEmpty()); // false</li><li>
