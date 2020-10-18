@@ -1,7 +1,7 @@
 /* Custom properties/variables  */
 :root {
-  --main-white: #EDE7E7;
-  --main-blue: #3D1A80;
+  --main-white: #454545;
+  --main-blue: #0e0e0e;
 
 }
 
@@ -301,7 +301,7 @@ img {
   font-weight: 200;
   font-style: italic;
   color: rgb(2, 2, 39);
-  align: right;
+  align-items: right;
 }
 
 .contact-section-header>h5 {
