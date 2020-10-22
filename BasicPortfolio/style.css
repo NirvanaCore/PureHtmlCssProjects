@@ -311,7 +311,7 @@ header {
   border-bottom: 4px solid #ff0033
 }
 
-@media(max-width: 620) {
+@media(max-width: 620px) {
   #projects-section-header {
     margin: 0;
     max-width: 100%;
