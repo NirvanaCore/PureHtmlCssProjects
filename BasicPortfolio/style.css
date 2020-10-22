@@ -308,7 +308,7 @@ p, a{
   border-bottom: 4px solid #ff0033
 }
 
-@media screen and (max-width: 620) {
+@media screen and (max-width:620px) {
   #projects-section-header {
     margin: 0;
     max-width: 100%;
@@ -377,7 +377,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width:720px){
   h2 {
       font-size: 2rem;
       font-weight: bold;
