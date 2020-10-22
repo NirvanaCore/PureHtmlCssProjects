@@ -29,4 +29,4 @@ This pages i created to learn html and css from basic to advance by my own. Crea
 -- Created a newsPaper web page or template, Using Flex.
 
 ## 10. Basic Portfolio Page
---
+-- Basic Portfolio redesigned with more nice features and all above project links.
