@@ -70,7 +70,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  max-height: 80px;
+  max-height: 70px;
   padding: 3rem 1rem;
   display: flex;
   justify-content: space-between;
@@ -181,7 +181,7 @@ header {
 }
 
 .nav-list>a {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: normal;
   width: 10vw;
   height: 5vh;
